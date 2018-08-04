@@ -95,7 +95,7 @@ BOT BY MR FAWZO LB
  
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(`© Made By :<@!222825921311277059> ™.`, 'https://cdn.discordapp.com/attachments/334701598196367370/335685097351151620/royalbot.png')
+                 .setFooter(`Made By FAWZO`, 'https://cdn.discordapp.com/attachments/334701598196367370/335685097351151620/royalbot.png')
 
   message.channel.sendEmbed(embed);
     }
@@ -168,7 +168,7 @@ client.on('message', message => {
      if (message.content === "Whelp") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-               .setFooter(`© RoyalDev ™.`, 'https://cdn.discordapp.com/attachments/334701598196367370/335685097351151620/royalbot.png')
+               .setFooter(`W BOT`, 'https://cdn.discordapp.com/attachments/334701598196367370/335685097351151620/royalbot.png')
   .setColor("#9B59B6")
   .addField("Done | تــــم" , "✉ | تم ارسالك في الخاص")
 
@@ -377,53 +377,6 @@ if (message.content.startsWith("Wsetvoice")) {
 
 }
 });
-
-
-
-
-
-client.on('guildMemberAdd', member => {
-
-    let channel = member.guild.channels.find('name', 'welcome');
-
-    let memberavatar = member.user.avatarURL
-
-      if (!channel) return;
-
-    let embed = new Discord.RichEmbed()
-
-        .setColor('#00ff47')
-
-        .setThumbnail(memberavatar)
-
-        .addField('?? | اسمك: ',`${member}`)
-
-        .addField('??|اطلق من دخل' , `منور السيرفر, ${member}`)
-
-        .addField('?? |ايديك:', "**[" + `${member.id}` + "]**" )
-
-                .addField('?|عضو رقم',`${member.guild.memberCount}`)
-
-               
-
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-
-                     
-
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
-
-                                       
-
-     .setFooter("Welcome")
-
-        .setTimestamp()
-
-   
-
-      channel.sendEmbed(embed);
-
-    });
-
 
 
 
