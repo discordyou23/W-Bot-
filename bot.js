@@ -56,7 +56,6 @@ Wping         | يجيب لك سرعة اتصال البوت
 Wsay          | يكرر كلامك
 Wembed        | يكرر كلامك بطريقة اخرى
 Wavatar       | يعرض لك صورتك
-Wcount        | لمعرفة كم عضو بسيرفر
 
 "اوامر السيرفرات"
 
@@ -356,20 +355,6 @@ client.setInterval(function() {
   }, time);
 });
 
-
-
-
-client.on('message', message => {
-              if (!message.channel.guild) return;
-      if(message.content =='Wcount')
-      var SaifDz = new Discord.RichEmbed()
-      .setThumbnail(message.author.avatarURL)
-      .setFooter(message.author.username, message.author.avatarURL)
-      .setTitle('W BOT--=| Members info')
-      .addBlankField(true)
-      .addField('عدد اعضاء السيرفر',${message.guild.memberCount})
-      message.channel.send(SaifDz);
-    });
 
 
 
