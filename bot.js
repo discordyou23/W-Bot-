@@ -403,35 +403,32 @@ client.on('message', message => {
 
 
 
+client.on('guildCreate', guild => {
+  client.channels.get("475443960660230176")
+const embed = new Discord.RichEmbed()
+   .setAuthor(Joined New Server ✅)
+   .setDescription(Server name: __${guild.name}__
+Server owner: __${guild.owner}__)
+         .setColor("#09fa2a")
+         .setFooter('DK BOT' , client.user.avatarURL)
+           client.channels.get("475443960660230176").send({embed});
+}
 
-client.on('message', message => {
-  if (message.content.startsWith(prefix + "Wdeafen")) {
-    if (!message.member.hasPermission('DEAFEN_MEMBERS')) return;
-  { message.member.setDeaf(true);
-    }
-  }
-    });
-client.on('message', message => {
-  if (message.content.startsWith(prefix + "Wmute")) {
-    if (!message.member.hasPermission('MUTE_MEMBERS')) return;
-  { message.member.setMute(true);
-    }
-  }
-    });
-client.on('message', message => {
-  if (message.content.startsWith(prefix + "Wundeafen")) {
-    if (!message.member.hasPermission('DEAFEN_MEMBERS')) return;
-  { message.member.setDeaf(false);
-    }
-  }
-    });
-client.on('message', message => {
-  if (message.content.startsWith(prefix + "Wunmute")) {
-    if (!message.member.hasPermission('MUTE_MEMBERS')) return;
-  { message.member.setMute(false);
-    }
-  }
-    });
+);
+
+
+client.on('guildDelete', guild => {
+  client.channels.get("475444614522732545")
+const embed = new Discord.RichEmbed()
+   .setAuthor(Left From Server ❌)
+   .setDescription(Server name: __${guild.name}__
+Server owner: __${guild.owner}__)
+         .setColor("#ff0000")
+         .setFooter('DK BOT' , client.user.avatarURL)
+           client.channels.get("475444614522732545").send({embed});
+}
+
+);
 
 
 
