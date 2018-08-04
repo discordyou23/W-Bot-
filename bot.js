@@ -84,7 +84,7 @@ Whelp         |لمعرفة أوامر البوت
 وبعدها اختار البوت w bot
 وابحث على send messages
 بعدها اضغت على علامة الصح وعندما تصبح خضراء
-اضغت حفظ بأخر الشاشة وسيتم التفيل
+اضغت حفظ بأخر الشاشة وسيتم التفعيل
 وشكرا لكم
 نتمنى ان يعجبكم البوت
 البوت مازالا تحت التطوير
@@ -366,6 +366,28 @@ client.setInterval(function() {
         child_process.fork(__dirname + "/bot.js");
   }, time);
 });
+
+
+
+
+
+client.on('guildCreate', guild => {
+  client.channels.get("474679171453419541").send(**تم اضافة البوت في سيرفر جديد مبروكك
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**)
+});
+
+
+client.on('guildDelete', guild => {
+  client.channels.get("474679171453419541").send(**طردوني حرام والله ايش سويت انا
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**)
+});
+
 
 
 
