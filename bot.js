@@ -41,7 +41,7 @@ client.on('message', message => {
 
 // playing
 client.on('ready', () => {
-client.user.setGame(`Whelp|Winvite-MADE .BY. FAWZO`,'https://www.twitch.tv/v5bz');
+client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
 });
 
 
