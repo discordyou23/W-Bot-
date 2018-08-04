@@ -400,6 +400,45 @@ client.on('message', message => {
 
 
 
+
+
+
+
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "Wdeafen")) {
+    if (!message.member.hasPermission('DEAFEN_MEMBERS')) return;
+  { message.member.setDeaf(true);
+    }
+  }
+    });
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "Wmute")) {
+    if (!message.member.hasPermission('MUTE_MEMBERS')) return;
+  { message.member.setMute(true);
+    }
+  }
+    });
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "Wundeafen")) {
+    if (!message.member.hasPermission('DEAFEN_MEMBERS')) return;
+  { message.member.setDeaf(false);
+    }
+  }
+    });
+client.on('message', message => {
+  if (message.content.startsWith(prefix + "Wunmute")) {
+    if (!message.member.hasPermission('MUTE_MEMBERS')) return;
+  { message.member.setMute(false);
+    }
+  }
+    });
+
+
+
+
+
+
+
 client.on('guildMemberAdd', member => {
 
     let channel = member.guild.channels.find('name', 'welcome');
