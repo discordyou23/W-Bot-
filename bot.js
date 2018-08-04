@@ -371,43 +371,6 @@ client.setInterval(function() {
 
 
 
-client.on('message', message => {
-  if (message.guild) {
- let embed = new Discord.RichEmbed()
-  let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'Wbc') {
-  if (!args[1]) {
-message.channel.send("**Mbc <message>**");
-return;
-}
-      message.guild.members.forEach(m => {
- if(!message.member.hasPermission('ADMINISTRATOR')) return;
-          var bc = new Discord.RichEmbed()
-          .setAuthor(message.author.username, message.author.avatarURL)
-          .addField(' The server', `${message.guild.name}`, true)
-          .addField(' who sended the messege ', `${message.author.username}!${message.author.discriminator}`, true)
-          .addField(' the messege ', args)
-          .setThumbnail(message.guild.iconURL)
-          .setColor('#00ff47')
-          m.send(`${m}`,{embed: bc});
-      });
-      const Himo = new Discord.RichEmbed()
-      .setAuthor(message.author.username, message.author.avatarURL)
-      .setTitle('| the messege is loading ')
-      .addBlankField(true)
-      .addField('| i got sended to  ', message.guild.memberCount , true)
-      .addField('| the message ', args)
-      .setColor('#00ff47')
-      message.channel.sendEmbed(embed);
-  }
-  } else {
-      return;
-  }
-});
-
-
-
-
 
 
 
