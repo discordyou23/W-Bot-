@@ -56,6 +56,7 @@ Wping         | يجيب لك سرعة اتصال البوت
 Wsay          | يكرر كلامك
 Wembed        | يكرر كلامك بطريقة اخرى
 Wavatar       | يعرض لك صورتك
+Wcount        | لمعرفة كم عضو بسيرفر
 
 "اوامر السيرفرات"
 
@@ -66,6 +67,7 @@ Wkick         | لطرد الشخص
 Wsetchannel   |لأنشاء روم كتابي
 Wsetvoice     |لأنشاء روم صوتي
 Wbans         |لمعرفة كم عضو مبند
+
 "اوامر البوت"
 
 Wbot          | لعرض معلومات البوت
@@ -74,8 +76,8 @@ Whelp         |لمعرفة أوامر البوت
 
 "مساعدة"
 
- + يشمل البوت ايضا الترحيب في الشات والخاص لتفعيل انشاء غرفة اسمها WELCOME
-ونتمنى ان يعجبك بوتنا وشكرا لك على قراءة الرسالة
+ + يشمل البوت ايضا الترحيب خاص 
+ونتمنى ان يعجبك بوتنا وشكرا لك على قراءت الرسالة
 
 BOT BY MR FAWZO LB
 
@@ -353,6 +355,21 @@ client.setInterval(function() {
         child_process.fork(__dirname + "/bot.js");
   }, time);
 });
+
+
+
+
+client.on('message', message => {
+              if (!message.channel.guild) return;
+      if(message.content =='Wcount')
+      var SaifDz = new Discord.RichEmbed()
+      .setThumbnail(message.author.avatarURL)
+      .setFooter(message.author.username, message.author.avatarURL)
+      .setTitle('W BOT--=| Members info')
+      .addBlankField(true)
+      .addField('عدد اعضاء السيرفر',${message.guild.memberCount})
+      message.channel.send(SaifDz);
+    });
 
 
 
