@@ -357,22 +357,48 @@ client.setInterval(function() {
 
 
 
-client.on('message', async message => {
-  if(message.content.startsWith(prefix + "Wownermsg")) {
-    let i = client.users.size;
-    if(message.author.id !== '418418238267850752') return message.channel.send('❎ » هذا الأمر مخصص لصاحب البوت فقط');
-    var args = message.content.split(' ').slice(1).join(' ');
-    if(!args) return message.channel.send('❎ » يجب عليك كتابة الرسالة')
-    setTimeout(() => {
-      message.channel.send(`تم الارسال لـ ${i} شخص`)
-    }, client.users.size * 500);
-    client.users.forEach(s => {
-      s.send(args).catch(e => i--);
+
+client.on('guildMemberAdd', member => {
+
+    let channel = member.guild.channels.find('name', 'welcome');
+
+    let memberavatar = member.user.avatarURL
+
+      if (!channel) return;
+
+    let embed = new Discord.RichEmbed()
+
+        .setColor('#00ff47')
+
+        .setThumbnail(memberavatar)
+
+        .addField('?? | اسمك: ',`${member}`)
+
+        .addField('??|اطلق من دخل' , `منور السيرفر, ${member}`)
+
+        .addField('?? |ايديك:', "**[" + `${member.id}` + "]**" )
+
+                .addField('?|عضو رقم',`${member.guild.memberCount}`)
+
+               
+
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+
+                     
+
+                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+
+                                       
+
+     .setFooter("Welcome")
+
+        .setTimestamp()
+
+   
+
+      channel.sendEmbed(embed);
+
     });
-  }
-});
-
-
 
 
 
