@@ -45,25 +45,6 @@ client.on('ready', () => {
 });
 
 
-client.on("message", msg => {
-  if(msg.content === '*' + "Wid") {
-      const embed = new Discord.RichEmbed();
-  embed.addField(":trident:|Username", `${msg.author.username}#${msg.author.discriminator}`, true)
-          .addField(":id:|iD", `${msg.author.id}`, true)
-          .setColor("RANDOM")
-          .setFooter(msg.author.username , msg.author.avatarURL)
-          .setThumbnail(`${msg.author.avatarURL}`)
-          .setTimestamp()
-          .setURL(`${msg.author.avatarURL}`)
-          .addField(':name_badge:|Status', `${msg.author.presence.status.toUpperCase()}`, true)
-          .addField(':game_die:|Playing', `${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name}`, true)
-          .addField(':medal:|Roles', `${msg.member.roles.filter(r => r.name).size}`, true)
-          .addField(':name_badge:|Discriminator', `${msg.discriminator}`, true)
-          .addField(':date:|Created At', `${msg.createdAt}`,true)
-          .addField(':robot:|Bot', `${msg.author.bot.toString().toUpperCase()}`, true);
-      msg.channel.send({embed: embed})
-  }
-});
 
    client.on('message', message => {
      if (message.content === "Whelp") {
@@ -93,7 +74,9 @@ Whelp         |لمعرفة أوامر البوت
 
 "مساعدة"
 
- +يشمل البوت ايضا الترحيب في الخاص
+ + يشمل البوت ايضا الترحيب في الشات والخاص لتفعيل انشاء غرفة اسمها WELCOME
+ونتمنى ان يعجبك بوتنا وشكرا لك على قراءة الرسالة
+
 BOT BY MR FAWZO LB
 
 سيرفر الدعم : [ https://discord.gg/zfmaBAQ ]
@@ -394,6 +377,55 @@ if (message.content.startsWith("Wsetvoice")) {
 
 }
 });
+
+
+
+
+
+client.on('guildMemberAdd', member => {
+
+    let channel = member.guild.channels.find('name', 'welcome');
+
+    let memberavatar = member.user.avatarURL
+
+      if (!channel) return;
+
+    let embed = new Discord.RichEmbed()
+
+        .setColor('#00ff47')
+
+        .setThumbnail(memberavatar)
+
+        .addField('?? | اسمك: ',`${member}`)
+
+        .addField('??|اطلق من دخل' , `منور السيرفر, ${member}`)
+
+        .addField('?? |ايديك:', "**[" + `${member.id}` + "]**" )
+
+                .addField('?|عضو رقم',`${member.guild.memberCount}`)
+
+               
+
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+
+                     
+
+                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+
+                                       
+
+     .setFooter("Welcome")
+
+        .setTimestamp()
+
+   
+
+      channel.sendEmbed(embed);
+
+    });
+
+
+
 
 
 client.on('message', message => {
