@@ -398,44 +398,6 @@ client.on('message', message => {
  });
 
 
-
-
-
-
-
-client.on('guildCreate', guild => {
-  client.channels.get("475443960660230176")
-const embed = new Discord.RichEmbed()
-   .setAuthor(Joined New Server)
-   .setDescription(Server name: __${guild.name}__
-Server owner: __${guild.owner}__)
-         .setColor("#09fa2a")
-         .setFooter('W BOT' , client.user.avatarURL)
-           client.channels.get("475443960660230176").send({embed});
-}
-
-);
-
-
-client.on('guildDelete', guild => {
-  client.channels.get("475444614522732545")
-const embed = new Discord.RichEmbed()
-   .setAuthor(Left From Server)
-   .setDescription(Server name: __${guild.name}__
-Server owner: __${guild.owner}__)
-         .setColor("#ff0000")
-         .setFooter('W BOT' , client.user.avatarURL)
-           client.channels.get("475444614522732545").send({embed});
-}
-
-);
-
-
-
-
-
-
-
 client.on('guildMemberAdd', member => {
 
     let channel = member.guild.channels.find('name', 'welcome');
