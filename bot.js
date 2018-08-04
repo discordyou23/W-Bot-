@@ -226,7 +226,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "© RoyalDev ™."
+          text: "MADE BY FAWZO W BOT"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -441,6 +441,33 @@ client.on('message', message => {
   .catch(console.error);
 }
 });
+
+
+
+
+
+
+client.on("message", message => {
+    const prefix = "W"
+              
+          if(!message.channel.guild) return;
+   if(message.author.bot) return;
+      if(message.content === prefix + "image"){ 
+          const embed = new Discord.RichEmbed()
+  
+      .setTitle(`This is ${message.guild.name} Photo!`)
+  .setAuthor(message.author.username, message.guild.iconrURL)
+    .setColor(`#00ff47`)
+    .setImage(message.guild.iconURL)
+    .setURL(message.guild.iconrURL)
+                    .setTimestamp()
+
+   message.channel.send({embed});
+      }
+  });
+
+
+
 
 
 
