@@ -416,10 +416,10 @@ return;
       });
       const Himo = new Discord.RichEmbed()
       .setAuthor(message.author.username, message.author.avatarURL)
-      .setTitle('✅| the messege is loading ')
+      .setTitle('| the messege is loading ')
       .addBlankField(true)
-      .addField('♨| i got sended to  ', message.guild.memberCount , true)
-      .addField('📝| the message ', args)
+      .addField('| i got sended to  ', message.guild.memberCount , true)
+      .addField('| the message ', args)
       .setColor('#00ff47')
       message.channel.sendEmbed(embed);
   }
