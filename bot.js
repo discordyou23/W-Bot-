@@ -50,7 +50,7 @@ client.on('ready', () => {
      if (message.content === "Whelp") {
 message.author.send("اوامر البوت الاسطورية" + `  **
 
-ليشتغل البوت اعطوه كل الصلحيات يعني اعلا رتبة وشكراااا^_^
+ليشتغل البوت اعطوه كل الصلحيات يعني اعلا رتبة وشكراااا
 
 "اوامر عامة"
 
@@ -357,21 +357,6 @@ const embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
-
-
-
-const child_process = require("child_process");
- client.on('ready' , function (){
-var time = 72000000;
-client.setInterval(function() {
-    client.destroy();
-        child_process.fork(__dirname + "/bot.js");
-  }, time);
-});
-
-
-
-
 
 
 
