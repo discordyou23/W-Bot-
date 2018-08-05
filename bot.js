@@ -495,6 +495,14 @@ client.channels.find('id', '475455296609845268').setName("Welcome To W");
 client.channels.find('id', '475455296609845268').setName("Welcome To WB");
 client.channels.find('id', '475455296609845268').setName("Welcome To WBO");
 client.channels.find('id', '475455296609845268').setName("Welcome To WBOT");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBOT S");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBOT SU");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBOT SUP");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBOT SUPP");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBOT SUPPO");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBOT SUPPOR");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBOT SUPPORT");
+  
   }, 3000);
 });
 
