@@ -480,6 +480,29 @@ client.on('message', message => {
 
 
 
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '475455296609845268').setName("W");
+client.channels.find('id', '475455296609845268').setName("We");
+client.channels.find('id', '475455296609845268').setName("Wel");
+client.channels.find('id', '475455296609845268').setName("Welc");
+client.channels.find('id', '475455296609845268').setName("Welco");
+client.channels.find('id', '475455296609845268').setName("Welcom");
+client.channels.find('id', '475455296609845268').setName("Welcome");
+client.channels.find('id', '475455296609845268').setName("Welcome T");
+client.channels.find('id', '475455296609845268').setName("Welcome To");
+client.channels.find('id', '475455296609845268').setName("Welcome To W");
+client.channels.find('id', '475455296609845268').setName("Welcome To WB");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBO");
+client.channels.find('id', '475455296609845268').setName("Welcome To WBOT");
+  }, 3000);
+});
+
+
+
+
+
+
 client.on("message", message => {
     const prefix = "W"
               
