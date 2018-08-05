@@ -556,7 +556,6 @@ const secre = [
 
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
-const youtube = new YouTube(GOOGLE_API_KEY);
 const queue = new Map();
 
 
