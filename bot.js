@@ -48,6 +48,7 @@ client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
 
    client.on('message', message => {
      if (message.content === "Whelp") {
+   .setColor(0x5500ff)
 message.author.send("اوامر البوت الاسطورية" + `  **
 
 ليشتغل البوت اعطوه كل الصلحيات يعني اعلا رتبة وشكراااا
@@ -63,8 +64,8 @@ message.author.send("اوامر البوت الاسطورية" + `  **
 
 -Wserver       | يعرض لك معلومات السيرفر
 -Wclear        | لمسح الشات
--Wban          | لتبنيد الشخص
--Wkick         | لطرد الشخص
+-Wban          |لتبنيد الشخص مع السبب
+-Wkick         |لطرد الشخص مع السبب
 -Wsetchannel   |لأنشاء روم كتابي
 -Wsetvoice     |لأنشاء روم صوتي
 -Wbans         |لمعرفة كم عضو مبند
