@@ -48,7 +48,6 @@ client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
 
    client.on('message', message => {
      if (message.content === "Whelp") {
-   .setColor(0x5500ff)
 message.author.send("اوامر البوت الاسطورية" + `  **
 
 ليشتغل البوت اعطوه كل الصلحيات يعني اعلا رتبة وشكراااا
