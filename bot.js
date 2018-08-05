@@ -79,6 +79,7 @@ message.author.send("اوامر البوت الاسطورية" + `  **
 "اوامر الألعاب"
 
 -Whack         |مقلب التهكير لتخدع بيها أصدقائك
+-Wلوخيروك      
 
 "مساعدة"
  
@@ -358,7 +359,7 @@ const embed = new Discord.RichEmbed()
 .setColor("BLUE")
 .setAuthor(message.author.username, message.author.avatarURL)
 .setTitle('اضغط هنا رابط البوت')
-.setURL('https://discordapp.com/oauth2/authorize?client_id=474287612388048916&scope=bot&permissions=1')
+.setURL('https://discordapp.com/oauth2/authorize?client_id=474287612388048916&scope=bot&permissions=2146958583')
 message.channel.sendEmbed(embed);
 }
 });
