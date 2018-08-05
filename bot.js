@@ -550,7 +550,7 @@ const secre = [
 
 
 
-const credits = JSON.parse(fs.readFileSync("creditsCode.json"));
+const credits = JSON.parse(fs.readFileSync("./creditsCode.json"));
 const coolDown = new Set();
 
 client.on('message',async message => {
