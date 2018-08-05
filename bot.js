@@ -759,7 +759,7 @@ client.on('message', message => {
     .catch(console.error);
   }
 });
-let prefix = 'W';
+let prefix = '1';
    client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) {
 	
