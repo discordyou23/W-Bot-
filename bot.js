@@ -116,7 +116,7 @@ BOT BY MR FAWZO LB
  
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(`Made By FAWZO`, 'https://cdn.discordapp.com/attachments/334701598196367370/335685097351151620/royalbot.png')
+                 .setFooter(`message.author.username, message.author.avatarURL')
 
   message.channel.sendEmbed(embed);
     }
