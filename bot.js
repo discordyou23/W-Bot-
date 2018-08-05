@@ -116,7 +116,7 @@ BOT BY MR FAWZO LB
  
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(`message.author.username, message.author.avatarURL')
+                 .setFooter(`W BOT ^_^')
 
   message.channel.sendEmbed(embed);
     }
@@ -189,7 +189,7 @@ client.on('message', message => {
      if (message.content === "Whelp") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-               .setFooter(`W BOT`, 'https://cdn.discordapp.com/attachments/334701598196367370/335685097351151620/royalbot.png')
+               .setFooter(`W BOT ^_^')
   .setColor("#9B59B6")
   .addField("Done | تــــم" , "✉ | تم ارسالك في الخاص")
 
