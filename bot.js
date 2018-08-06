@@ -505,6 +505,35 @@ client.channels.find('id', '475455296609845268').setName("Welcome To WBOT SUPPOR
 
 
 
+client.on('message', message => {
+  if (true) {
+if (message.content === 'Wsupport') {
+      message.author.send('https://discord.gg/zfmaBAQ').catch(e => console.log(e.stack));
+ 
+    }
+   }
+  });
+ 
+ 
+client.on('message', message => {
+     if (message.content === "Wsupport") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField("Done | تــــم" , " |  تــــم ارســالك في الخــاص")
+     
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
 const secre = [
   "**لو خيروك بين العيش وحدك في جزيرة كبيرة منعزلة مع أكبر درجات الرفاهية وبين العيش في مكان قديم ولكن مع أصدقائك المقربين**.",
   "**لو خيروك بين فقدان ذاكرتك والعيش مع أصدقائك وأقربائك أو بقاء ذاكرتك ولكن العيش وحيد**.",
