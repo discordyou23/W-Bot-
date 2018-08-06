@@ -194,7 +194,7 @@ client.on('message', message => {
   .setAuthor(message.author.username)
                .setFooter('W BOT ^_^')
   .setColor("#9B59B6")
-  .addField("Done | تــــم" , "✉ | تم ارسالك في الخاص")
+  .addField("Done✅| تــــم" , "✉ | تم ارسالك في الخاص")
 
      
      
