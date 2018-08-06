@@ -475,12 +475,12 @@ client.on('message', message => {
 
 
    client.on('message', message => {
-     if (message.content === "Waddrole") {
+     if (message.content === "السلام عليكم") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
                .setFooter('W BOT ^_^')
   .setColor("#9B59B6")
-  .addField("Done |تم أنشاء الرتبة بنجاح")
+  .addField("وعليكم السلام منور يا عسل")
 
      
      
