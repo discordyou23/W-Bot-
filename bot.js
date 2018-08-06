@@ -647,6 +647,27 @@ client.on("message", message => {
 
 
 
+
+client.on('message', message => {
+if (message.content.startsWith("Waddrole")) {
+             if(!message.channel.guild) return message.reply('**Commands in the server**');
+        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply('⚠ **You do not have permissions**');
+        let args = message.content.split(" ").slice(1);
+            message.guild.createRole({
+                name : args.join(' '),
+                color : "RANDOM", 
+            }).then(function(role){
+                message.member.addRole(role)
+            })
+
+}
+});
+
+
+
+
+
+
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`ولكم نورت السيرفر يا أسطورة 
