@@ -474,6 +474,22 @@ client.on('message', message => {
 
 
 
+   client.on('message', message => {
+     if (message.content === "Waddrole") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+               .setFooter('W BOT ^_^')
+  .setColor("#9B59B6")
+  .addField("Done |تم أنشاء الرتبة بنجاح")
+
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
 
 
 
