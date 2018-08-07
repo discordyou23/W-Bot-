@@ -907,6 +907,7 @@ Server owner: __${guild.owner}__`)
    client.on('message', message => {
      if (message.content === "Whelp-chat") {
       const embed = new Discord.RichEmbed()
+
   .setColor("#FF0000")
   .addField('========{W Bot ☆}========')
   .addField('help-admin|لمعرفة الأوامر العامة')
@@ -915,6 +916,7 @@ Server owner: __${guild.owner}__`)
   .addField('help-bot|لمعرفة معلومات البوت')     
   .addField('========{HELP -☆}========')
                  .setFooter('W BOT ^_^')
+
   message.channel.sendEmbed(embed);
     }
 });
