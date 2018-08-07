@@ -1163,4 +1163,19 @@ channel.send({embed : embed});
 
 
 
+
+
+  client.on('message', msg => {//msg
+    if (msg.content === 'Whelp-chat') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/418481129222307861/476423918383529986/-1.png"})
+    }
+  });;
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
