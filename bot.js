@@ -914,6 +914,7 @@ Server owner: __${guild.owner}__`)
   .addField('help-games|لمعرفة اوامر الألعاب')   
   .addField('help-bot|لمعرفة معلومات البوت')     
   .addField('========{HELP -☆}========')
+                 .setFooter('W BOT ^_^')
   message.channel.sendEmbed(embed);
     }
 });
