@@ -49,6 +49,7 @@ client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
    client.on('message', message => {
      if (message.content === "Whelp") {
 message.author.send("💯W BOT☆" + `  **
+
 "✔لحماية سيرفرك من التهكير ساوي غرفة اسمها log➰"
 "⚠يوجد بلبوت أيضا الترحيب بلخاص وبلشات⚠"
 "🚫البوت شغال 24 ساعة لا يفلق😮"
