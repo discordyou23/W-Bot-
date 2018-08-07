@@ -904,6 +904,18 @@ Server owner: __${guild.owner}__`)
 
 
 
+client.on('message', message => {
+            if (message.content.startsWith(prefix + "Whelp-chat")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **Whelp-bot** ' ,' **لمعرفة اوامر البوت** ')
+.addField('     **Whelp-server**  ' ,' **لمعرفة اوامر السيرفرات** ')
+.addField('     **Whelp-games** ' , '**لمعرفة اوامر الألعاب**') 
+.addField('     **Whelp-admin** ' ,' **لمعرفة اوامر عامة** ')
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
+    }
+});
 
 
 
