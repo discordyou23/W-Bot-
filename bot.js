@@ -50,7 +50,6 @@ client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
      if (message.content === "Whelp") {
 message.author.send("💯W BOT☆" + `  **
 
-✔لحماية سيرفرك من التهكير ساوي غرفة اسمها log➰
 ⚠يوجد بلبوت أيضا الترحيب بلخاص وبلشات وليشتغل ساوي غرفة اسمها welcome⚠
 🚫البوت شغال 24 ساعة لا يفلق😮
 .W BOT☆ COMMANDS.
@@ -110,6 +109,7 @@ message.author.send("💯W BOT☆" + `  **
 -🔱Support server🔱
 |>--------------------☆
 [ https://discord.gg/zfmaBAQ ]
+
 
 **`);
     }
