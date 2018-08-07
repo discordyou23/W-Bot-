@@ -48,7 +48,6 @@ client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
 
    client.on('message', message => {
      if (message.content === "Whelp") {
-.setColor("#FF0000")
 message.author.send("💯W BOT☆" + `  **
 
 ╔[❖══════❖]
