@@ -51,8 +51,6 @@ client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
 message.author.send("💯W BOT☆" + `  **
 
 
-⚠يوجد بلبوت أيضا الترحيب بلخاص وبلشات وليشتغل ساوي غرفة اسمها welcome⚠
-🚫البوت شغال 24 ساعة لا يفلق😮
 .W BOT☆ COMMANDS.
 .WELCOME HELP BOT.
 ╔[❖══════❖]╗
@@ -113,6 +111,7 @@ message.author.send("💯W BOT☆" + `  **
 -🔱Support server🔱
 |>--------------------☆
 [ https://discord.gg/zfmaBAQ ]
+
 
 
 **`);
