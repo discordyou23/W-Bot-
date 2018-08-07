@@ -782,19 +782,6 @@ client.on('guildCreate', guild => {
 
 
 
-   client.on('message', message => {
-     if (message.content === "هلا") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-               .setFooter('W BOT ^_^')
-  .setColor("#9B59B6")
-  .addField("هلوات")
-
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
@@ -802,75 +789,24 @@ client.on('guildCreate', guild => {
 
 
 
-   client.on('message', message => {
-     if (message.content === "منور") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-               .setFooter('W BOT ^_^')
-  .setColor("#9B59B6")
-  .addField("منوررررر يا حلو😍")
-
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
 
 
 
-   client.on('message', message => {
-     if (message.content === "سلام") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-               .setFooter('W BOT ^_^')
-  .setColor("#9B59B6")
-  .addField("الله معك")
-
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
 
 
 
-   client.on('message', message => {
-     if (message.content === "احبك") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-               .setFooter('W BOT ^_^')
-  .setColor("#9B59B6")
-  .addField("الحب حرام")
-
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
 
 
-   client.on('message', message => {
-     if (message.content === "باك") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-               .setFooter('W BOT ^_^')
-  .setColor("#9B59B6")
-  .addField("باكات☺")
 
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
@@ -1046,11 +982,6 @@ var channel =member.guild.channels.find('name', 'welcome')
 if (!channel) return;
 channel.send({embed : embed});
 });
-
-
-
-
-
 
 
 
