@@ -1162,7 +1162,7 @@ channel.send({embed : embed});
      if (message.content === "Whelp-chat") {
      let embed = new Discord.RichEmbed()
   .setColor("#9B59B6")
-  .addField("https://i.imgur.com/ahH70fU.png")
+  .addField("https://cdn.discordapp.com/attachments/418481129222307861/476423918383529986/Whelp-chat")
 
      
      
