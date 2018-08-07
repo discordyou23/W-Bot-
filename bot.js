@@ -913,12 +913,64 @@ message.react("❌")
 
 
 
+  client.on('message',async message => {
+if(message.content === 'Wunbanall') {
+message.guild.fetchBans().then(ba => {
+ba.forEach(ns => {
+message.guild.unban(ns);
+});
+});
+}
+});
+  
+ 
 
+
+
+   client.on('message', message => {
+     if (message.content === "Wunbanall") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+               .setFooter('W BOT ^_^')
+  .setColor("#9B59B6")
+  .addField("Done✅|🌟تم إزلت الباند عن جميع الأعضاء😮")
+
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
+     
 
 
 
   
  
+
+
+
+
+
+
+client.on('guildMemberRemove', member => {
+    var embed = new Discord.RichEmbed()
+    .setAuthor(member.user.username, member.user.avatarURL)
+    .setThumbnail(member.user.avatarURL)
+    .setTitle(`😣خرج عضو`)
+    .setDescription(`👋الى اللقاء...`)
+    .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+    .setColor('RED')
+    .setFooter(`W BOT ☆`, '')
+
+var channel =member.guild.channels.find('name', 'welcome')
+if (!channel) return;
+channel.send({embed : embed});
+});
+
+
+
+
+
 
 
 
