@@ -909,12 +909,19 @@ Server owner: __${guild.owner}__`)
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
+      
   .addField('========{W Bot ☆}========')
+      
   .addField('help-admin|لمعرفة الأوامر العامة')
+      
   .addField('help-server|لمعرفة أوامر السيرفرات')     
+      
   .addField('help-games|لمعرفة اوامر الألعاب')   
+      
   .addField('help-bot|لمعرفة معلومات البوت')     
+      
   .addField('========{HELP -☆}========')
+      
   message.channel.sendEmbed(embed);
     }
 });
