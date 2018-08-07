@@ -946,19 +946,23 @@ client.on('message', msg => {
 
 
 
-client.on('guildMemberAdd', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('475455296609845268').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('475455367070089218').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
-});
 
-client.on('guildMemberRemove', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('475455296609845268').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('475455367070089218').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
-});
+client.on('message', message => {
+              if (!message.channel.guild) return;
+      if(message.content =='Wcount')
+      var SaifDz = new Discord.RichEmbed()
+      .setThumbnail(message.author.avatarURL)
+      .setFooter(message.author.username, message.author.avatarURL)
+      .setTitle('🌷| Members info')
+      .addBlankField(true)
+      .addField('عدد اعضاء السيرفر',`${message.guild.memberCount}`)
+      message.channel.send(SaifDz);
+    });
+
+
+
+
+
 
 
 
