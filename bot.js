@@ -97,10 +97,6 @@ message.author.send("💯W BOT☆" + `  **
  "🔚⚠مساعدة⚠"
 ╚[❖══════❖]╝ 
 
-
-🅱OT  }{W BOT☆}{ "🚩البوت الأساسي🚩"
--->https://discordapp.com/api/oauth2/authorize?client_id=474287612388048916&scope=bot&permissions=8
-
 🅱OT 🎵MUSIC🎶 WBOT☆ "🎶بوت الموسيقى التابع للبوت🎶"
 -->https://discordapp.com/api/oauth2/authorize?client_id=475785111451729921&scope=bot&permissions=8
 
