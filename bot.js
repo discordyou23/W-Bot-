@@ -49,7 +49,9 @@ client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
    client.on('message', message => {
      if (message.content === "Whelp") {
 message.author.send("💯W BOT☆" + `  **
-
+"✔لحماية سيرفرك من التهكير ساوي غرفة اسمها log➰"
+"⚠يوجد بلبوت أيضا الترحيب بلخاص وبلشات⚠"
+"🚫البوت شغال 24 ساعة لا يفلق😮"
 ╔[❖══════❖]
 .W BOT☆ COMMANDS.
 .WELCOME HELP BOT.
@@ -94,10 +96,14 @@ message.author.send("💯W BOT☆" + `  **
  "🔚⚠مساعدة⚠"
 ╚[❖══════❖]╝ 
 
-🅱OT 🎵MUSIC🎶 WBOT☆
+
+🅱OT  }{W BOT☆}{ "🚩البوت الأساسي🚩"
+-->https://discordapp.com/api/oauth2/authorize?client_id=474287612388048916&scope=bot&permissions=8
+
+🅱OT 🎵MUSIC🎶 WBOT☆ "🎶بوت الموسيقى التابع للبوت🎶"
 -->https://discordapp.com/api/oauth2/authorize?client_id=475785111451729921&scope=bot&permissions=8
 
-🅱OT ➰ENGLISH〽 WBOT☆
+🅱OT ➰ENGLISH〽 WBOT☆ "🔱بوت الأنكليزي التابع للبوت🔱"
 -->https://discordapp.com/api/oauth2/authorize?client_id=475811540487110666&scope=bot&permissions=8
 
 |>--------------------☆
