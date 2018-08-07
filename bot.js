@@ -1158,17 +1158,7 @@ channel.send({embed : embed});
 });
 
 
-   client.on('message', message => {
-     if (message.content === "Whelp-chat") {
-     let embed = new Discord.RichEmbed()
-  .setColor("#9B59B6")
-  .addField("https://cdn.discordapp.com/attachments/418481129222307861/476423918383529986/-1.png")
 
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
