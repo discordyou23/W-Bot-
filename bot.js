@@ -907,16 +907,14 @@ Server owner: __${guild.owner}__`)
    client.on('message', message => {
      if (message.content === "Whelp-chat") {
       const embed = new Discord.RichEmbed()
-
   .setColor("#FF0000")
-  .addField('========{W Bot ☆}========')
-  .addField('help-admin|لمعرفة الأوامر العامة')
-  .addField('help-server|لمعرفة أوامر السيرفرات')     
-  .addField('help-games|لمعرفة اوامر الألعاب')   
-  .addField('help-bot|لمعرفة معلومات البوت')     
-  .addField('========{HELP -☆}========')
-                 .setFooter('W BOT ^_^')
-
+  .addField('|========{W Bot ☆}========|')
+  .addField('Whelp-admin|لمعرفة الأوامر العامة')
+  .addField('Whelp-server|لمعرفة أوامر السيرفرات')     
+  .addField('Whelp-games|لمعرفة اوامر الألعاب')   
+  .addField('Whelp-bot|لمعرفة معلومات البوت')     
+  .addField('|========{HELP -☆}========|')
+  .setFooter('W BOT ^_^')
   message.channel.sendEmbed(embed);
     }
 });
