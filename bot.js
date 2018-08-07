@@ -71,6 +71,7 @@ message.author.send("💯W BOT☆" + `  **
 ❖-Wsetvoice⭐     |لأنشاء روم صوتي.
 ❖-Wbans🔢         |لمعرفة كم عضو مبند.
 ❖-Waddrole💯      |أنشاء رتبة.
+❖-Wmove🔛         |سحب العضو من غرفة صوتية لغرفة ثانية لشتغل منشن الشخص
 ❖-Wcount🔢        |يعطيك عدد اعضاء السيرفر كلهم.
 ❖-Wwarn⚠         |لأعطاء أنذار لشخص ما ساوي غرفة اسمها warn وسوف يعمل
 ❖-Wimage✨        |لتطليع صورت سيرفر.
@@ -1001,6 +1002,35 @@ message.react("❌")
 
 
 
+client.on('message', message => { 
+    var prefix ="W";
+           if (message.content.startsWith(prefix + "id")) {
+     var args = message.content.split(" ").slice(1);
+     let user = message.mentions.users.first();
+     var men = message.mentions.users.first();
+        var heg;
+        if(men) {
+            heg = men
+        } else {
+            heg = message.author
+        }
+      var mentionned = message.mentions.members.first();
+         var h;
+        if(mentionned) {
+            h = mentionned
+        } else {
+            h = message.member
+        }
+               moment.locale('ar-TN');
+      var id = new  Discord.RichEmbed()
+      .setAuthor(message.author.username, message.author.avatarURL) 
+    .setColor("#707070")
+    .addField(': دخولك لديسكورد قبل', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\`` ,true) 
+    .addField(': انضمامك لسيرفر قبل', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)               
+    .setFooter(`Morro Bot`, 'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')                                 
+    .setThumbnail(heg.avatarURL);
+    message.channel.send(id)
+}       });
 
 
 
