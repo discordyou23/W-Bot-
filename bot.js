@@ -50,6 +50,7 @@ client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
      if (message.content === "Whelp") {
 message.author.send("💯W BOT☆" + `  **
 
+
 ⚠يوجد بلبوت أيضا الترحيب بلخاص وبلشات وليشتغل ساوي غرفة اسمها welcome⚠
 🚫البوت شغال 24 ساعة لا يفلق😮
 .W BOT☆ COMMANDS.
@@ -101,8 +102,11 @@ message.author.send("💯W BOT☆" + `  **
 ❖-Wvolume   |لتعلية وأخفاض الصوت.
 ❖-Wresume   |لتعيد الاغنية.
 🅱OT 🎵MUSIC🎶 WBOT☆ "🎶بوت الموسيقى التابع للبوت🎶"
+
 -->https://discordapp.com/api/oauth2/authorize?client_id=475785111451729921&scope=bot&permissions=8
+
 🅱OT ➰ENGLISH〽 WBOT☆ "🔱بوت الأنكليزي التابع للبوت🔱"
+
 -->https://discordapp.com/api/oauth2/authorize?client_id=475811540487110666&scope=bot&permissions=8
 ╔[❖══════❖]╗
 |>--------------------☆
