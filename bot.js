@@ -1003,4 +1003,153 @@ channel.send({embed : embed});
 
 
 
+
+   client.on('message', message => {
+     if (message.content === "السلام عليكم") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('😘وعليكم السلام ورحمة الله وبركاته👋')
+                 .setFooter('W BOT ^_^')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
+   client.on('message', message => {
+     if (message.content === "هلو") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('هلوات😍')
+                 .setFooter('W BOT ^_^')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+   client.on('message', message => {
+     if (message.content === "باك") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('باكات😊')
+                 .setFooter('W BOT ^_^')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+   client.on('message', message => {
+     if (message.content === "هاي") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('هايات😍😍')
+                 .setFooter('W BOT ^_^')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
+   client.on('message', message => {
+     if (message.content === "زق") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('😡عيب أحترم نفسك ولو في ناس عم تشوف شو عم تحكي😠')
+                 .setFooter('W BOT ^_^')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+   client.on('message', message => {
+     if (message.content === "باي") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('بايات😊')
+                 .setFooter('W BOT ^_^')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+   client.on('message', message => {
+     if (message.content === "سلام") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('سلامات😍😍')
+                 .setFooter('W BOT ^_^')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
+
+
+   client.on('message', message => {
+     if (message.content === "اونر البوت") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('هو mr fawzo')
+                 .setFooter('W BOT ^_^')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
