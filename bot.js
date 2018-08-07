@@ -946,18 +946,20 @@ client.on('message', msg => {
 
 
 
-
-client.on('message', message => {
-  if (!message.content.startsWith(prefix)) return;
-  const verifed = ["418418238267850752"];
-if (message.content.startsWith(prefix + 'Wownerbot')) {
-    if(!message.channel.guild) return;
-if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage("**انت صاحب البوت **")
-} else {
-   message.reply("**انت لسا صاحب البوت**");   
-}
-}
+client.on('guildMemberAdd', member => {
+    const botCount = member.guild.members.filter(m=>m.user.bot).size
+    const memberCount = [member.guild.memberCount] - [botCount]
+    client.channels.get('475455296609845268').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('475455367070089218').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
+
+client.on('guildMemberRemove', member => {
+    const botCount = member.guild.members.filter(m=>m.user.bot).size
+    const memberCount = [member.guild.memberCount] - [botCount]
+    client.channels.get('475455296609845268').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('475455367070089218').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+});
+
 
 
 
