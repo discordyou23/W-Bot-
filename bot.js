@@ -1158,7 +1158,17 @@ channel.send({embed : embed});
 });
 
 
+   client.on('message', message => {
+     if (message.content === "Whelp-chat") {
+     let embed = new Discord.RichEmbed()
+  .setColor("#9B59B6")
+  .addField("https://i.imgur.com/ahH70fU.png")
 
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
 
 
 
