@@ -112,13 +112,7 @@ message.author.send("💯W BOT☆" + `  **
 -🔱Support server🔱
 |>--------------------☆
 
-
 [ https://discord.gg/zfmaBAQ ]
-
--------------------☆
-❖❤BOT BY FAWZO❤❖
--------------------☆
-
 
 **`);
     }
