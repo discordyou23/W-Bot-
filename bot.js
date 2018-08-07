@@ -1019,8 +1019,25 @@ message.guild.unban(ns);
 
 
 
+   client.on('message', message => {
+     if (message.content === "Wunbanall") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+               .setFooter('W BOT ^_^')
+  .setColor("#9B59B6")
+  .addField("Done✅|🌟تم إزلت الاند عن جميع الأعضاء😮")
 
      
+     
+  message.channel.sendEmbed(embed);
+    }
+});
+     
+
+
+
+
+
 
 
 
