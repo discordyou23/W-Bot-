@@ -1031,7 +1031,7 @@ message.guild.unban(ns);
   .setAuthor(message.author.username)
                .setFooter('W BOT ^_^')
   .setColor("#9B59B6")
-  .addField("Done✅|🌟تم إزلت الاند عن جميع الأعضاء😮")
+  .addField("Done✅|🌟تم إزلت الباند عن جميع الأعضاء😮")
 
      
      
