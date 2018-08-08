@@ -126,7 +126,7 @@ message.author.send("💯W BOT☆" + `  **
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
-  .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+  .addField('``👑سرعة أتصال الــبوت👑`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
                  .setFooter('W BOT ^_^')
 
   message.channel.sendEmbed(embed);
@@ -169,7 +169,6 @@ if (command == "embed") {
  
 var prefix = "W";
 client.on('message', message => {
-    if(!message.channel.guild) message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **'); 
     if(message.content == prefix + 'server') {
         var servername = message.guild.name
         var اونر = message.guild.owner
@@ -182,14 +181,14 @@ client.on('message', message => {
         var الروم = message.guild.defaultChannel
         var server = new Discord.RichEmbed()
         .setThumbnail(message.guild.iconURL)
-        .addField('اسم السيرفر', servername)
-        .addField('اي دي السيرفر ' , [ايدي])
-        .addField('أعضاء السيرفر', اعضاء)
-        .addField('رومات السيرفر', الرومات)
-        .addField('روم الشات الأساسي', الروم)
-        .addField('صاحب السيرفر', اونر)
-        .addField('بلد السيرفر', بلدالسيرفر)
-        .addField('تاريخ افتتاح السيرفر', عمل)
+        .addField('✔اسم السيرفر', servername)
+        .addField('🆔اي دي السيرفر ' , [ايدي])
+        .addField('💥أعضاء السيرفر', اعضاء)
+        .addField('🔱رومات السيرفر', الرومات)
+        .addField('💯روم الشات الأساسي', الروم)
+        .addField('🚩صاحب السيرفر', اونر)
+        .addField('ℹبلد السيرفر', بلدالسيرفر)
+        .addField('📐تاريخ افتتاح السيرفر', عمل)
         .setColor('RANDOM')
 
         message.channel.sendEmbed(server)
@@ -242,7 +241,7 @@ client.on("message", message => {
       message.channel.sendMessage("", {embed: {
         title: "Done | تــم",
         color: 0x06DF00,
-        description: "تم مسح الرسائل بنجاح",
+        description: "✅تم مسح الرسائل بنجاح✔",
         footer: {
           text: "MADE BY FAWZO W BOT"
         }
@@ -258,9 +257,9 @@ client.on('message', message => {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
      let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .addField("**عدد السيرفرات الي فيها البوت:**" , client.guilds.size)
-  .addField("**المستخدمين:**", client.users.size)
-  .addField("**قنوات:**", client.channels.size)
+  .addField("**🔱عدد السيرفرات الي فيها البوت🔱:**" , client.guilds.size)
+  .addField("**👑المستخدمين👑:**", client.users.size)
+  .addField("**🚩قنوات🚩:**", client.channels.size)
   .setTimestamp()
 message.channel.sendEmbed(embed);
     }
@@ -282,23 +281,23 @@ client.on('message', message => {
 
   if (command == "kick") {
   if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
-  if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**انت لا تملك صلاحية للكيك**");
-  if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) return message.reply("**البوت لا يملك صلاحيات الكيك");
+  if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**🚩انت لا تملك صلاحية للكيك🚩**");
+  if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) return message.reply("**⚠البوت لا يملك صلاحيات الكيك⚠");
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
-if (message.mentions.users.size < 1) return message.reply("**منشن الشخص المراد طرده**");
+if (message.mentions.users.size < 1) return message.reply("**🚹منشن الشخص المراد طرده⚠**");
 if (!message.guild.member(user)
-.kickable) return message.reply("**لايمكنني طرد هذا الشخص**");
+.kickable) return message.reply("**⚠ل⚠ايمكنني طرد هذا الشخص**");
 
   message.guild.member(user).kick();
 
   const kickembed = new Discord.RichEmbed()
-  .setAuthor(`تم طرد العضو`, user.displayAvatarURL)
+  .setAuthor(`✔تم طرد العضو✅`, user.displayAvatarURL)
   .setColor("#502faf")
   .setTimestamp()
-  .addField("**المطرود:**",  '**[ ' + `${user.tag}` + ' ]**')
-  .addField("**من قبل:**", '**[ ' + `${message.author.tag}` + ' ]**')
-  .addField("**السبب**", '**[ ' + `${reason}` + ' ]**')
+  .addField("**⚠المطرود⚠:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**🚩من قبل🚩:**", '**[ ' + `${message.author.tag}` + ' ]**')
+  .addField("**🔞السبب🔞**", '**[ ' + `${reason}` + ' ]**')
   message.channel.send({
     embed : kickembed
     
@@ -317,23 +316,23 @@ client.on('message', message => {
 
   if (command == "ban") {
       if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
-  if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**انت لا تملك صلاحية الباند**");
-  if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("البوت لايملك صلاحيات الباند");
+  if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**⚠انت لا تملك صلاحية الباند⚠**");
+  if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("🚫البوت لايملك صلاحيات الباند🚫");
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
-if (message.mentions.users.size < 1) return message.reply("**منشن الشخص اللي تريد تبنيده**");
+if (message.mentions.users.size < 1) return message.reply("**💡منشن الشخص اللي تريد تبنيده💡**");
   if (!message.guild.member(user)
-.kickable) return message.reply("**لايمكنني تبنيد هذا الشخص**");
+.kickable) return message.reply("**⚠لايمكنني تبنيد هذا الشخص⚠**");
 
   message.guild.member(user).ban();
 
   const banembed = new Discord.RichEmbed()
-  .setAuthor(`تم تبنيد العضو`, user.displayAvatarURL)
+  .setAuthor(`✔تم تبنيد العضو✅`, user.displayAvatarURL)
   .setColor("#502faf")
   .setTimestamp()
-  .addField("**المبند:**",  '**[ ' + `${user.tag}` + ' ]**')
-  .addField("**من قبل:**", '**[ ' + `${message.author.tag}` + ' ]**')
-  .addField("**السبب**", '**[ ' + `${reason}` + ' ]**')
+  .addField("**🚩المبند🚩:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**⚠من قبل⚠:**", '**[ ' + `${message.author.tag}` + ' ]**')
+  .addField("**🔞السبب🔞**", '**[ ' + `${reason}` + ' ]**')
   message.channel.send({
     embed : banembed
   })
