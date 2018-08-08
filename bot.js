@@ -169,7 +169,6 @@ if (command == "embed") {
  
 var prefix = "W";
 client.on('message', message => {
-    if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **'); 
     if(message.content == prefix + 'server') {
         var servername = message.guild.name
         var اونر = message.guild.owner
