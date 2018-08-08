@@ -126,7 +126,7 @@ message.author.send("💯W BOT☆" + `  **
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
-  .addField('``👑سرعة أتصال الــبوت👑`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+  .addField('👑سرعة أتصال الــبوت👑' , `${Date.now() - message.createdTimestamp}` + ' ms`')
                  .setFooter('W BOT ^_^')
 
   message.channel.sendEmbed(embed);
@@ -1126,6 +1126,30 @@ client.on('message', message =>{
     }
 });
 
+
+
+
+
+
+client.on('message', message => {
+        var prefix = "W";
+        if(message.content.startsWith(prefix + 'mutevoice')) {
+          if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**❌ ").then(m => m.delete(5000));
+          if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
+           
+        if(message.mentions.users.size === 0) {
+          return message.reply("✔منشن الشخص لأعطائه الميوت😉");
+        }
+        let muteMember = message.guild.member(message.mentions.users.first());
+        if(!muteMember) {
+          return message.reply("✅مرة أخرى✔");
+        }
+        muteMember.setMute(true);
+        if(muteMember) {
+          message.channel.sendMessage("تم أعطائه الميوت بنجاح|😉");
+        }
+      }
+    });
 
 
 
