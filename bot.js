@@ -1165,8 +1165,6 @@ client.on('message', message => {
 
 
 
-const Discord = require('discord.js'); //npm i discord.js --save
-
 const Util = require('discord.js');//npm i discord.js --save
 
 const getYoutubeID = require('get-youtube-id'); //npm i get-youtube-id
