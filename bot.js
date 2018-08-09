@@ -106,14 +106,10 @@ message.author.send("💯W BOT☆" + `  **
 
 -->https://discordapp.com/api/oauth2/authorize?client_id=475785111451729921&scope=bot&permissions=8
 
-🅱OT ➰ENGLISH〽 WBOT☆ "🔱بوت الأنكليزي التابع للبوت🔱"
-
--->https://discordapp.com/api/oauth2/authorize?client_id=475811540487110666&scope=bot&permissions=8
 |>--------------------☆
 -🔱Support server🔱
 |>--------------------☆
 [ https://discord.gg/zfmaBAQ ]
-
 
 
 **`);
