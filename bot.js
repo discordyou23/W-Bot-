@@ -1315,7 +1315,25 @@ client.on('message',message =>{
 
 
 
-
+client.on('message', message => {
+      var prefix = "W";
+      if(message.content.startsWith(prefix + 'unmutevoice')) {
+        if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**❌ ").then(m => m.delete(5000));
+        if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
+         
+      if(message.mentions.users.size === 0) {
+        return message.reply("🔱منشن الشخص لفك الميوت عنه😊");
+      }
+      let muteMember = message.guild.member(message.mentions.users.first());
+      if(!muteMember) {
+        return message.reply("😉عيد مرة أخرى😊");
+      }
+      muteMember.setMute(false);
+      if(muteMember) {
+        message.channel.sendMessage("😉تم فك الميوت بنجاح✔");
+      }
+    }
+  });
 
 
 
