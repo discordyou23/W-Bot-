@@ -1292,9 +1292,9 @@ client.on('message',message =>{
    
   });
   var embed = new Discord.RichEmbed()
-  .setColor("#000000")
+  .setColor("#567987")
   .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://i.imgur.com/OM00xyh.png")
+  .setThumbnail("https://cdn.discordapp.com/attachments/439015493035360257/477174541786021888/JPEG_20180809_205904.jpg")
            message.channel.send({ embed: embed });
    
   });
