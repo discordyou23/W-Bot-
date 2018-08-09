@@ -1188,7 +1188,6 @@ const stripIndents = require('common-tags').stripIndents; //npm i common-tags
 
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(prefix)) return undefined;
     
     const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
@@ -1199,14 +1198,14 @@ client.on('message', async msg => {
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 
-	if (command === `play`) {
+	if (command === `Wplay`) {
 		const voiceChannel = msg.member.voiceChannel;
         
         if (!voiceChannel) return msg.channel.send("I can't find you in any voice channel!");
         
         const permissions = voiceChannel.permissionsFor(msg.client.user);
         
-        if (!permissions.has('CONNECT')) {
+        if (!permissions.has('Wconnect')) {
 
 			return msg.channel.send("I don't have enough permissions to join your voice channel!");
         }
