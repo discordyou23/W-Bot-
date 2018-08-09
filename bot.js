@@ -1183,10 +1183,6 @@ const fs = require('fs');//npm i fs
 
 const stripIndents = require('common-tags').stripIndents; //npm i common-tags
 
-const client = new Discord.Client({disableEveryone: true}); //نزل كل البكجات اللي مكتوبة فوق
-
-
-
 const prefix = 'W'; //حط البرفكس اللي تبيه
 
 
