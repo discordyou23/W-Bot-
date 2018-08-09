@@ -1183,7 +1183,7 @@ const fs = require('fs');//npm i fs
 
 const stripIndents = require('common-tags').stripIndents; //npm i common-tags
 
-const prefix = 'W'; //حط البرفكس اللي تبيه
+
 
 
 client.on('message', async msg => { 
