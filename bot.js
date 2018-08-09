@@ -77,6 +77,8 @@ message.author.send("💯W BOT☆" + `  **
 ❖-Wmsgowner🔢     |لأرسال رسالة لصاحب البوت.
 ❖-Wunbanall       |فك الباند عن الجميع بسيرفر
 ❖-Wwarn⚠         |لأعطاء أنذار لشخص ما ساوي غرفة اسمها warn وسوف يعمل
+❖-Wmutevoice      |لأعطاء ميوت صوتي منشن الشخص ليعطي ميوت.
+❖-Wunmutevoice    |لفك الميوت الصوتي منشن الشخص ويفك.
 ❖-Wimage✨        |لتطليع صورت سيرفر.
 ╔[❖══════❖]╗
 "🔚🅱اوامر البوت🅱"
@@ -357,7 +359,7 @@ client.on('message' , message => {
 const embed = new Discord.RichEmbed()
 .setColor("BLUE")
 .setAuthor(message.author.username, message.author.avatarURL)
-.setTitle('اضغط على علامة الصح                     |✔')
+.setTitle('اضغط على علامة الصح                                           |♢[✅]♢')
 .setURL('https://discordapp.com/oauth2/authorize?client_id=474287612388048916&scope=bot&permissions=2146958583')
 message.channel.sendEmbed(embed);
 }
