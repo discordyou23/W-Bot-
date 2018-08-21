@@ -52,7 +52,7 @@ message.author.send("SYSTEM SERVER☆" + `  **
 "🔚ℹاوامر السيرفراتℹ"
 ╚[❖══════❖]╝
 ❖-#serverℹ       |يعرض لك معلومات السيرفر.
-❖-#msgserver      |لأرسال رسالة لجميع الموجودة في سيرفر.
+❖-#bc      |لأرسال رسالة لجميع الموجودة في سيرفر.
 ❖-#clear〰        |لمسح الشات.
 ❖-#ban🚫          |لتبنيد الشخص مع السبب.
 ❖-#kick❎         |لطرد الشخص مع السبب.
@@ -239,7 +239,7 @@ client.on('message', async msg => { // eslint-disable-line
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-					.setFooter("BomBot")
+					.setFooter("SYSTEM SERVER")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 
 					// eslint-disable-next-line max-depth
@@ -406,11 +406,11 @@ ${prefix}queue ⇏ ♠لمعرفة قآئمة التشغيل❗
 
 client.on('message', message => {
   if(!message.channel.guild) return;
-if(message.content.startsWith('#msgserver')) {
+if(message.content.startsWith('#bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "BomBot";
+let copy = "SYSTEM SERVER";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -1042,7 +1042,7 @@ message.react("❌")
 
 
   client.on('message',async message => {
-if(message.content === 'Wunbanall') {
+if(message.content === '#unbanall') {
 message.guild.fetchBans().then(ba => {
 ba.forEach(ns => {
 message.guild.unban(ns);
@@ -1130,142 +1130,6 @@ client.on('message', message =>{
         reportschannel.send(reportEmbed);
     };
 });
-
-
-
-
-
-
-
-
-
-
-   client.on('message', message => {
-     if (message.content === "السلام عليكم") {
-      const embed = new Discord.RichEmbed()
- 
-  .setColor("#FF0000")
-  .addField('😘وعليكم السلام ورحمة الله وبركاته👋')
-                 .setFooter('SYSTEM SERVER')
-
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
-
-
-
-
-
-   client.on('message', message => {
-     if (message.content === "هلو") {
-      const embed = new Discord.RichEmbed()
- 
-  .setColor("#FF0000")
-  .addField('هلوات😍')
-                 .setFooter('SYSTEM SERVER')
-
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
-
-
-
-
-
-
-
-
-   client.on('message', message => {
-     if (message.content === "باك") {
-      const embed = new Discord.RichEmbed()
- 
-  .setColor("#FF0000")
-  .addField('باكات😊')
-                 .setFooter('SYSTEM SERVER')
-
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
-
-
-
-   client.on('message', message => {
-     if (message.content === "هاي") {
-      const embed = new Discord.RichEmbed()
- 
-  .setColor("#FF0000")
-  .addField('هايات😍😍')
-                 .setFooter('SYSTEM SERVER')
-
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
-
-
-
-
-
-   client.on('message', message => {
-     if (message.content === "زق") {
-      const embed = new Discord.RichEmbed()
- 
-  .setColor("#FF0000")
-  .addField('😡عيب أحترم نفسك ولو في ناس عم تشوف شو عم تحكي😠')
-                 .setFooter('SYSTEM SERVER')
-
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
-
-
-
-
-   client.on('message', message => {
-     if (message.content === "باي") {
-      const embed = new Discord.RichEmbed()
- 
-  .setColor("#FF0000")
-  .addField('بايات😊')
-                 .setFooter('SYSTEM SERVER')
-
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
-
-
-
-
-   client.on('message', message => {
-     if (message.content === "سلام") {
-      const embed = new Discord.RichEmbed()
- 
-  .setColor("#FF0000")
-  .addField('سلامات😍😍')
-                 .setFooter('SYSTEM SERVER')
-
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
-
-
-
-
-
-
 
 
 
