@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
- const prefix = "#";
+ const prefix = "A";
 client.on('ready', () => {
   console.log('╔[══════════════════════════════════]╗');
   console.log('')
@@ -24,14 +24,14 @@ client.on('ready', () => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("SYSTEM SERVER #help",{type: 'WATCHING'});
+     client.user.setActivity("SYSTEM SERVER Ahelp",{type: 'WATCHING'});
 
 });
 
 
 
    client.on('message', message => {
-     if (message.content === "#help") {
+     if (message.content === "Ahelp") {
 message.author.send("SYSTEM SERVER☆" + `  **
 
 
@@ -94,7 +94,7 @@ message.author.send("SYSTEM SERVER☆" + `  **
 
 // -ping
    client.on('message', message => {
-     if (message.content === "#ping") {
+     if (message.content === "Aping") {
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
@@ -406,7 +406,7 @@ ${prefix}queue ⇏ ♠لمعرفة قآئمة التشغيل❗
 
 client.on('message', message => {
   if(!message.channel.guild) return;
-if(message.content.startsWith('#bc')) {
+if(message.content.startsWith('Abc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -477,7 +477,7 @@ client.on('message', message => {
 
 
    client.on('message', message => {
-     if (message.content === "#help") {
+     if (message.content === "Ahelp") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
                .setFooter('SYSTEM SERVER')
@@ -531,7 +531,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-     if (message.content === "#bot") {
+     if (message.content === "Abot") {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
      let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -634,7 +634,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("#hack")) {
+    if (message.content.startsWith("Ahack")) {
       if (message.author.bot) return
            message.delete();
              let args = message.content.split(' ').slice(1);
@@ -683,7 +683,7 @@ client.on("guildMemberAdd", function(member) {
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("#setchannel")) {
+if (message.content.startsWith("Asetchannel")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have MANAGE_CHANNELS Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -694,7 +694,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("#setvoice")) {
+if (message.content.startsWith("Asetvoice")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have MANAGE_CHANNELS Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
@@ -707,28 +707,13 @@ if (message.content.startsWith("#setvoice")) {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("#bans")) {
+    if (message.content.startsWith("Abans")) {
         message.guild.fetchBans()
         .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر`))
   .catch(console.error);
 }
 });
 
-
-
-   client.on('message', message => {
-     if (message.content === "السلام عليكم") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-               .setFooter('SYSTEM SERVER')
-  .setColor("#9B59B6")
-  .addField("وعليكم السلام منور يا عسل")
-
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
@@ -795,7 +780,7 @@ const Sra7a = [
     'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
   client.on('message', message => {
-if (message.content.startsWith('#صراحه')) {
+if (message.content.startsWith('Aصراحه')) {
     if(!message.channel.guild) return message.reply('** This command only for servers **');
  var client= new Discord.RichEmbed()
  .setTitle("لعبة صراحة ..")
@@ -815,7 +800,7 @@ if (message.content.startsWith('#صراحه')) {
 
 
   client.on('message', message => {
-      if(message.content.startsWith ("#marry")) {
+      if(message.content.startsWith ("Amarry")) {
       if(!message.channel.guild) return message.reply('** This command only for servers **')
       var proposed = message.mentions.members.first()
      
@@ -892,7 +877,7 @@ const secre = [
  
  
  client.on('message', message => {
-   if (message.content.startsWith("#لوخيروك")) {
+   if (message.content.startsWith("Aلوخيروك")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -909,7 +894,7 @@ const secre = [
 
 
 client.on("message", message => {
-    const prefix = "#"
+    const prefix = "A"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -935,7 +920,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-if (message.content.startsWith("#addrole")) {
+if (message.content.startsWith("Aaddrole")) {
              if(!message.channel.guild) return message.reply('**Commands in the server**');
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply('⚠ **You do not have permissions**');
         let args = message.content.split(" ").slice(1);
@@ -973,7 +958,7 @@ client.on("guildMemberAdd", member => {
 
             
 client.on('message', msg => { 
-    if (msg.content.startsWith(`#warn`)) {
+    if (msg.content.startsWith(`Awarn`)) {
       if(!msg.member.hasPermission("MANAGE_MESSAGES")) return;
        let args = msg.content.split(" ").slice(1);
       if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
@@ -1003,7 +988,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-    var prefix = "#";
+    var prefix = "A";
 if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'move')) {
  if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -1042,7 +1027,7 @@ message.react("❌")
 
 
   client.on('message',async message => {
-if(message.content === '#unbanall') {
+if(message.content === 'Aunbanall') {
 message.guild.fetchBans().then(ba => {
 ba.forEach(ns => {
 message.guild.unban(ns);
@@ -1056,7 +1041,7 @@ message.guild.unban(ns);
 
 
    client.on('message', message => {
-     if (message.content === "#unbanall") {
+     if (message.content === "Aunbanall") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
                .setFooter('SYSTEM SERVER')
@@ -1104,7 +1089,7 @@ client.on('message', message =>{
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
-    let prefix = '#';
+    let prefix = 'A';
      
     if(cmd === `${prefix}report`){
         let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -1166,7 +1151,7 @@ client.on('message', message => {
 
 client.on('message', async message => {
   let args = message.content.split(" ");
-  if(message.content.startsWith(prefix + "#mute")) {
+  if(message.content.startsWith(prefix + "Amute")) {
     if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply('**أنت لا تملك الخصائص اللازمة . يجب توفر خاصية `Manage Roles`**').then(msg => {
       msg.delete(3500);
       message.delete(3500);
@@ -1278,7 +1263,7 @@ client.on('message', async message => {
 
 
 client.on('message',message =>{
-    var prefix = "#";
+    var prefix = "A";
     if(message.content.startsWith(prefix + 'top')) {
   message.guild.fetchInvites().then(i =>{
   var invites = [];
@@ -1359,7 +1344,7 @@ client.on('message', message => {
 
 
   client.on('message', message => {
-    if (message.content.startsWith(prefix + "#id")) {
+    if (message.content.startsWith(prefix + "Aid")) {
 var args = message.content.split(" ").slice(1);
 let user = message.mentions.users.first();
 var men = message.mentions.users.first();
