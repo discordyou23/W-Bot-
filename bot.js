@@ -109,7 +109,6 @@ message.author.send("SYSTEM SERVER☆" + `  **
 });
 
 // -say
-var prefix = "#";
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -516,7 +515,7 @@ msg.delete();
 
 
  
-var prefix = "#";
+
 client.on('message', message => {
     if(message.content == prefix + 'server') {
         var servername = message.guild.name
@@ -549,7 +548,7 @@ client.on('message', message => {
      if (message.content === "#help") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-               .setFooter('W BOT ^_^')
+               .setFooter('SYSTEM SERVER')
   .setColor("#9B59B6")
   .addField("Done✅| تــــم" , "✉ | تم ارسالك في الخاص")
 
@@ -578,8 +577,6 @@ client.on('message', message => {
 
   
 client.on("message", message => {
-    var prefix = "#";
- 
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **ليس لديك صلاحيات**');
@@ -1035,22 +1032,6 @@ client.on("guildMemberAdd", member => {
 
 
 
-client.on('guildCreate', guild => {
-  var embed = new Discord.RichEmbed()
-  .setColor(0x5500ff)
-  .setDescription('شكراً لك لإضافه البوت الى سيرفرك')
-      guild.owner.send(embed)
-});
-
-
-
-
-
-
-
-
-
-
 
 
             
@@ -1146,7 +1127,7 @@ message.guild.unban(ns);
      if (message.content === "#unbanall") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-               .setFooter('W BOT ^_^')
+               .setFooter('SYSTEM SERVER')
   .setColor("#9B59B6")
   .addField("Done✅|🌟تم إزلت الباند عن جميع الأعضاء😮")
 
@@ -1359,7 +1340,6 @@ client.on('message', message =>{
 
 
 client.on('message', message => {
-        var prefix = "#";
         if(message.content.startsWith(prefix + 'mutevoice')) {
           if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**❌ ").then(m => m.delete(5000));
           if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
@@ -1543,7 +1523,6 @@ client.on('message',message =>{
 
 
 client.on('message', message => {
-      var prefix = "#";
       if(message.content.startsWith(prefix + 'unmutevoice')) {
         if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**❌ ").then(m => m.delete(5000));
         if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
