@@ -41,17 +41,17 @@ client.on('message', message => {
 
 // playing
 client.on('ready', () => {
-client.user.setGame(`Whelp-|-Winvite-|-BY FAWZO`,'https://www.twitch.tv/v5bz');
+client.user.setGame(`SYSTEM SERVER #help`,'https://www.twitch.tv/v5bz');
 });
 
 
 
    client.on('message', message => {
-     if (message.content === "Whelp") {
+     if (message.content === "#help") {
 message.author.send("💯W BOT☆" + `  **
 
 
-.W BOT☆ COMMANDS.
+.SYSTEM SERVER COMMANDS.
 .WELCOME HELP BOT.
 ╔[❖══════❖]╗
  "🔚🚩اوامر عامة🚩"
@@ -84,9 +84,6 @@ message.author.send("💯W BOT☆" + `  **
 "🔚🅱اوامر البوت🅱"
 ╚[❖══════❖]╝
 ❖-Wbot🅱          |لعرض معلومات البوت.
-❖-Winvite✅       |لاضافة البوت الى سيرفرك.
-❖-Wsupport✔      |لدخول لسيرفر السيبورت.
-❖-Whelp⚠         |لمعرفة أوامر البوت.
 ╔[❖══════❖]╗
 "🔚🎮اوامر الألعاب🎮"
 ╚[❖══════❖]╝
@@ -94,22 +91,8 @@ message.author.send("💯W BOT☆" + `  **
 ❖-Wلوخيروك🎮        |GAMES.
 ❖-Wصراحه🎮         |GAMES.
 ❖-Wmarry🎮        |لعبة الزواج منشن الشخص لتبي تزوجه ههههه.
-╔[❖══════❖]╗
- "🎵موسيقى🎶"
-╚[❖══════❖]╝ 
-❖-Wjoin     |لتدخيل البوت لغرفة صوتية.
-❖-Wplay     |لتشغيل الاغنية.
-❖-Wstop     |لتوقيف الاغنية.
-❖-Wvolume   |لتعلية وأخفاض الصوت.
-❖-Wresume   |لتعيد الاغنية.
-🅱OT 🎵MUSIC🎶 WBOT☆ "🎶بوت الموسيقى التابع للبوت🎶"
 
--->https://discordapp.com/api/oauth2/authorize?client_id=475785111451729921&scope=bot&permissions=8
-
-|>--------------------☆
--🔱Support server🔱
-|>--------------------☆
-[ https://discord.gg/zfmaBAQ ]
+.SYSTEM SERVER....
 
 
 **`);
@@ -120,12 +103,12 @@ message.author.send("💯W BOT☆" + `  **
 
 // -ping
    client.on('message', message => {
-     if (message.content === "Wping") {
+     if (message.content === "#ping") {
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
   .addField('👑سرعة أتصال الــبوت👑' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter('W BOT ^_^')
+                 .setFooter('SYSTEM SERVER')
 
   message.channel.sendEmbed(embed);
     }
