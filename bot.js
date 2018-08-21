@@ -164,7 +164,6 @@ function hasRole(mem, role) {
 
 
 
-let ar = JSON.parse(fs.readFileSync(`./AutoRole.json`, `utf8`))
 
 
 client.on('guildMemberAdd', member => {
