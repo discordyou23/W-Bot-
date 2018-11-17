@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
- const prefix = "#";
+ const prefix = "M";
 client.on('ready', () => {
   console.log('╔[══════════════════════════════════]╗');
   console.log('')
@@ -25,14 +25,14 @@ client.on('ready', () => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("_Codes©",{type: 'WATCHING'});
+     client.user.setActivity("_Max-Shop©",{type: 'WATCHING'});
 
 });
 
 
 
    client.on('message', message => {
-     if (message.content === "#help") {
+     if (message.content === "help") {
 message.author.send("Codes© Bot" + `  **
 
 
@@ -89,12 +89,12 @@ message.author.send("Codes© Bot" + `  **
 
 // -ping
    client.on('message', message => {
-     if (message.content === "#ping") {
+     if (message.content === "Mping") {
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
   .addField('سرعة أتصال الــبوت' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter('Codes©')
+                 .setFooter('Max-Shop©')
 
   message.channel.sendEmbed(embed);
     }
@@ -158,46 +158,6 @@ function hasRole(mem, role) {
 
 
 
-client.on('message', message => {
-  if(!message.channel.guild) return;
-if(message.content.startsWith('#bc')) {
-if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
-let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "Codes©";
-let request = `Requested By ${message.author.username}`;
-if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
-msg.react('✅')
-.then(() => msg.react('❌'))
-.then(() =>msg.react('✅'))
-
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
-let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
-reaction1.on("collect", r => {
-message.channel.send(`☑ | Done ... The Broadcast Message Has Been Sent For ${message.guild.members.size} Members`).then(m => m.delete(5000));
-message.guild.members.forEach(m => {
-var bc = new
-Discord.RichEmbed()
-.setColor('RANDOM')
-.setTitle('برودكاست')
-.addField('🚩السيرفر🚩', message.guild.name)
-.addField('🔰المرسل🔰', message.author.username)
-.addField('👑الرسالة👑', args)
-.setThumbnail(message.author.avatarURL)
-.setFooter(copy, client.user.avatarURL);
-m.send({ embed: bc })
-msg.delete();
-})
-})
-reaction2.on("collect", r => {
-message.channel.send(`**Broadcast Canceled.**`).then(m => m.delete(5000));
-msg.delete();
-})
-})
-}
-});
 
 
  
@@ -231,7 +191,7 @@ client.on('message', message => {
 
 
    client.on('message', message => {
-     if (message.content === "#help") {
+     if (message.content === "help") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
                .setFooter('_Codes©')
@@ -275,7 +235,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "✅تم مسح الرسائل بنجاح✔",
         footer: {
-          text: "Codes©"
+          text: "Max-Shop©"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -437,7 +397,7 @@ client.on("guildMemberAdd", function(member) {
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("#setchannel")) {
+if (message.content.startsWith("Msetchannel")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have MANAGE_CHANNELS Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -448,7 +408,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("#setvoice")) {
+if (message.content.startsWith("Msetvoice")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have MANAGE_CHANNELS Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
@@ -461,7 +421,7 @@ if (message.content.startsWith("#setvoice")) {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("#bans")) {
+    if (message.content.startsWith("Mbans")) {
         message.guild.fetchBans()
         .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر`))
   .catch(console.error);
@@ -648,7 +608,7 @@ const secre = [
 
 
 client.on("message", message => {
-    const prefix = "#"
+    const prefix = "M"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -674,7 +634,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-if (message.content.startsWith("#addrole")) {
+if (message.content.startsWith("Maddrole")) {
              if(!message.channel.guild) return message.reply('**Commands in the server**');
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply('⚠ **You do not have permissions**');
         let args = message.content.split(" ").slice(1);
@@ -712,7 +672,7 @@ client.on("guildMemberAdd", member => {
 
             
 client.on('message', msg => { 
-    if (msg.content.startsWith(`#warn`)) {
+    if (msg.content.startsWith(`Mwarn`)) {
       if(!msg.member.hasPermission("MANAGE_MESSAGES")) return;
        let args = msg.content.split(" ").slice(1);
       if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
@@ -742,7 +702,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-    var prefix = "#";
+    var prefix = "M";
 if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'move')) {
  if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -781,7 +741,7 @@ message.react("❌")
 
 
   client.on('message',async message => {
-if(message.content === '#unbanall') {
+if(message.content === 'Munbanall') {
 message.guild.fetchBans().then(ba => {
 ba.forEach(ns => {
 message.guild.unban(ns);
@@ -795,7 +755,7 @@ message.guild.unban(ns);
 
 
    client.on('message', message => {
-     if (message.content === "#unbanall") {
+     if (message.content === "Munbanall") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
                .setFooter('SYSTEM SERVER')
@@ -831,7 +791,7 @@ client.on('message', message =>{
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
-    let prefix = '#';
+    let prefix = 'M';
      
     if(cmd === `${prefix}report`){
         let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -893,7 +853,7 @@ client.on('message', message => {
 
 client.on('message', async message => {
   let args = message.content.split(" ");
-  if(message.content.startsWith(prefix + "#mute")) {
+  if(message.content.startsWith(prefix + "Mmute")) {
     if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply('**أنت لا تملك الخصائص اللازمة . يجب توفر خاصية `Manage Roles`**').then(msg => {
       msg.delete(3500);
       message.delete(3500);
@@ -973,7 +933,7 @@ client.on('message', async message => {
       mention.removeRole(role);
       message.channel.send(`**:white_check_mark: ${mention.user.username} unmuted in the server ! :neutral_face:  **  `);
     },duration * 60000);
-  } else if(message.content.startsWith(prefix + "#unmute")) {
+  } else if(message.content.startsWith(prefix + "Munmute")) {
     let mention = message.mentions.members.first();
     let role = message.guild.roles.find('name', 'Muted') || message.guild.roles.get(r => r.name === 'Muted');
     if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply('**أنت لا تملك الخصائص اللازمة . يجب توفر خاصية `Manage Roles`**').then(msg => {
@@ -1005,7 +965,7 @@ client.on('message', async message => {
 
 
 client.on('message',message =>{
-    var prefix = "#";
+    var prefix = "M";
     if(message.content.startsWith(prefix + 'top')) {
   message.guild.fetchInvites().then(i =>{
   var invites = [];
@@ -1086,7 +1046,7 @@ client.on('message', message => {
 
 
   client.on('message', message => {
-    if (message.content.startsWith(prefix + "#id")) {
+    if (message.content.startsWith(prefix + "Mid")) {
 var args = message.content.split(" ").slice(1);
 let user = message.mentions.users.first();
 var men = message.mentions.users.first();
