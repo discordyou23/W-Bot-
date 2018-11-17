@@ -25,7 +25,7 @@ client.on('ready', () => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("Codes©_#help",{type: 'WATCHING'});
+     client.user.setActivity("_Codes©",{type: 'WATCHING'});
 
 });
 
@@ -93,7 +93,7 @@ message.author.send("Codes© Bot" + `  **
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
-  .addField('👑سرعة أتصال الــبوت👑' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+  .addField('سرعة أتصال الــبوت' , `${Date.now() - message.createdTimestamp}` + ' ms`')
                  .setFooter('Codes©')
 
   message.channel.sendEmbed(embed);
@@ -164,7 +164,7 @@ if(message.content.startsWith('#bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "SYSTEM SERVER";
+let copy = "Codes©";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -234,7 +234,7 @@ client.on('message', message => {
      if (message.content === "#help") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-               .setFooter('SYSTEM SERVER')
+               .setFooter('_Codes©')
   .setColor("#9B59B6")
   .addField("Done✅| تــــم" , "✉ | تم ارسالك في الخاص")
 
@@ -271,11 +271,11 @@ client.on("message", message => {
       
       message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
       message.channel.sendMessage("", {embed: {
-        title: "Done | تــم",
+        title: "Done Clear",
         color: 0x06DF00,
         description: "✅تم مسح الرسائل بنجاح✔",
         footer: {
-          text: "MADE BY Codes©"
+          text: "Codes©"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -422,7 +422,7 @@ client.on('message', message => {
 
 
 client.on("guildMemberAdd", function(member) {
-    const wc = member.guild.channels.find("name", "welcome")
+    const wc = member.guild.channels.find("name", "chat")
         const embed = new Discord.RichEmbed()
         .setColor('B90C0C')
         .setAuthor(member.user.tag, member.user.avatarURL)
