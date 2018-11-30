@@ -408,9 +408,8 @@ client.on('message', message => {
 client.on("guildMemberAdd", function(member) {
     const wc = member.guild.channels.find("name", "royal")
         const embed = new Discord.RichEmbed()
-        .setColor('B90C0C')
         .setAuthor(member.user.tag, member.user.avatarURL)
- .setDescription('**Welcome To 🔱Royal Force🔱')
+ .setDescription('**🌷Welcome To 🔱Royal Force🔱**')
 .setThumbnail(member.avatarURL)
         .setTimestamp()
         return wc.sendEmbed(embed);
