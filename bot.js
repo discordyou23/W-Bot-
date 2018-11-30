@@ -19,7 +19,9 @@ client.on('ready', () => {
 });
                                                                                                                                                                  
 
-
+client.on('ready', () => {                           
+client.user.setGame(`_Royal Force System©`);                                                                                                                                                                                                                                                                                                                                                                                                                            
+});
 
 
 
