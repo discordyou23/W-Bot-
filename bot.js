@@ -114,7 +114,7 @@ client.on("message", message => {
  
   .setColor("#FF0000")
   .addField('سرعة أتصال الــبوت' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter('Max-Shop©')
+                 .setFooter('Royal Force©')
 
   message.channel.sendEmbed(embed);
     }
@@ -248,7 +248,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "Done✅",
         footer: {
-          text: "Max-Shop©"
+          text: "Royal Force©"
         }
       }}).then(msg => {msg.delete(100)});
                           }
