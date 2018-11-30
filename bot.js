@@ -112,7 +112,6 @@ client.on("message", message => {
      if (message.content === "Rping") {
       const embed = new Discord.RichEmbed()
  
-  .setColor("#FF0000")
   .addField('سرعة أتصال الــبوت' , `${Date.now() - message.createdTimestamp}` + ' ms`')
                  .setFooter('Royal Force©')
 
