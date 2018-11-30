@@ -65,11 +65,6 @@ member.addRole(KinG66S[member.user.id].roles.shift());
 
 
 
-client.on('ready', () => {
-     client.user.setActivity("_Royal Force©",{type: 'WATCHING'});
-
-});
-
 
 client.on('ready',async () => {
   client.channels.find(ch => ch.id === "518121069077331970" && ch.type === 'voice').join();
@@ -125,7 +120,11 @@ client.on("message", message => {
     }
 });
 
-// -say
+
+
+
+
+
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -311,6 +310,11 @@ if (!message.guild.member(user)
 }
 });
 
+
+
+
+
+
 client.on('message', message => {
   if (message.author.boss) return;
   if (!message.content.startsWith(prefix)) return;
@@ -344,6 +348,11 @@ if (message.mentions.users.size < 1) return message.reply("**💡منشن الش
   })
 }
 });
+
+
+
+
+
 
 
 client.on('message', message => {
@@ -400,19 +409,6 @@ if (message.content.startsWith("Rsetvoice")) {
 
 }
 });
-
-
-
-
-
-  message.channel.sendEmbed(client);
-  message.react("??")
-}
-});
-
-
-
-
 
 
 
