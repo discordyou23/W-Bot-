@@ -77,8 +77,8 @@ client.on('ready',async () => {
 
 
 client.on('message',async Epic => {
-  var codes = "#";
-  if(Epic.content.startsWith(codes + "onlinezorex")) {
+  var codes = "R";
+  if(Epic.content.startsWith(codes + "online")) {
   if(!Epic.guild.member(Epic.author).hasPermissions('MANAGE_CHANNELS')) return Epic.reply(':x: **ليس لديك الصلاحيات الكافية**');
   if(!Epic.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return Epic.reply(':x: **ليس معي الصلاحيات الكافية**');
   Epic.guild.createChannel(`Voice Online : [ ${Epic.guild.members.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
