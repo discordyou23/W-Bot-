@@ -76,6 +76,25 @@ client.on('ready',async () => {
 
 
 
+client.on('message',async Epic => {
+  var codes = "#";
+  if(Epic.content.startsWith(codes + "onlinezorex")) {
+  if(!Epic.guild.member(Epic.author).hasPermissions('MANAGE_CHANNELS')) return Epic.reply(':x: **ليس لديك الصلاحيات الكافية**');
+  if(!Epic.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return Epic.reply(':x: **ليس معي الصلاحيات الكافية**');
+  Epic.guild.createChannel(`Voice Online : [ ${Epic.guild.members.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
+    console.log(`Voice Online Is Activation In ${Epic.guild.name}`);
+    c.overwritePermissions(Epic.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+    setInterval(() => {
+      c.setName(` Royal_Online :  ${Epic.guild.members.filter(m => m.voiceChannel).size} .`)
+    },1000);
+  });
+  }
+});
+
+
 client.on("message", message => {
     var prefix = "R";
         if (message.author.id === client.user.id) return;
@@ -107,6 +126,17 @@ client.on("message", message => {
 
 
 
+
+client.on('message', msg => {
+  if(msg.content === '.')
+  msg.reply('**🌷فديت النقطة أنااااااا❤**')
+});
+
+
+client.on('message', msg => {
+  if(msg.content === 'ارحب')
+  msg.reply('**👑Welcome To Royal Force|نتمنى لك أفضل الأوقات معنا❤**')
+});
 
 
 // -ping
