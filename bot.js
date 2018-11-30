@@ -88,7 +88,7 @@ client.on('message',async Epic => {
       SPEAK: false
     });
     setInterval(() => {
-      c.setName(` Royal_Online :  ${Epic.guild.members.filter(m => m.voiceChannel).size} .`)
+      c.setName(` [VOICE_ONLINE]:[  ${Epic.guild.members.filter(m => m.voiceChannel).size} ]`)
     },1000);
   });
   }
