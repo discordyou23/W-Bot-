@@ -1,7 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const dateFormat = require('dateformat');
+
 const adminprefix = "$";
 const prefix = "R";
+let done = {};
+
+
 client.on('ready', () => {
   console.log('╔[══════════════════════════════════]╗');
   console.log('')
@@ -75,6 +80,29 @@ client.on('ready',async () => {
 
 
 
+
+const TOKEN = "";
+
+function commandIs(str, msg){
+    return msg.content.toLowerCase().startsWith('.' + str);
+}
+
+function pluck(array) {
+    return array.map(function(item) { return item["name"]; });
+}
+
+function hasRole(mem, role) {
+    if(pluck(mem.roles).includes(role)){
+        return true;
+    } else {
+        return false;
+    }
+
+
+	
+	
+	
+	
 
 client.on('message',async Epic => {
   var codes = "R";
@@ -162,7 +190,7 @@ client.on('message', msg => {
 
 
 
-
+let ar = JSON.parse(fs.readFileSync(`./AutoRole.json`, `utf8`))
 
 
 client.on('guildMemberAdd', member => {
@@ -229,7 +257,7 @@ Role : __${ar[message.guild.id].role}__`)
 
 client.on('ready', () => {
   console.log(`AutoRole Code Started By Friends Team`);
-    client.user.setStatus("dnd")
+    client.user.setStatus("online")
 });
 
 
