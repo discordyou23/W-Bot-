@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const adminprefix = "#";
+const adminprefix = "$";
 const prefix = "R";
 client.on('ready', () => {
   console.log('╔[══════════════════════════════════]╗');
@@ -152,6 +152,10 @@ client.on('message', msg => {
 });
 
 
+client.on('message', msg => {
+  if(msg.content === 'Rstop')
+  msg.reply('**تم إيقاف الأغنية|✅**')
+});
 
 
 
