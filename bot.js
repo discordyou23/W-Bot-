@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const adminprefix = "R";
+const adminprefix = "#";
 const prefix = "R";
 client.on('ready', () => {
   console.log('╔[══════════════════════════════════]╗');
