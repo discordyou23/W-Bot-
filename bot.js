@@ -164,8 +164,6 @@ client.on('message', msg => {
 
 
 
-let ar = JSON.parse(fs.readFileSync(`./AutoRole.json`, `utf8`))
-
 
 client.on('guildMemberAdd', member => {
   if(!ar[member.guild.id]) ar[member.guild.id] = {
