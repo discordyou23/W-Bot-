@@ -81,22 +81,7 @@ client.on('ready',async () => {
 
 
 
-const TOKEN = "";
 
-function commandIs(str, msg){
-    return msg.content.toLowerCase().startsWith('.' + str);
-}
-
-function pluck(array) {
-    return array.map(function(item) { return item["name"]; });
-}
-
-function hasRole(mem, role) {
-    if(pluck(mem.roles).includes(role)){
-        return true;
-    } else {
-        return false;
-    }
 
 
 	
