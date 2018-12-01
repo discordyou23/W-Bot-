@@ -220,7 +220,7 @@ Role : __${ar[message.guild.id].role}__`)
   }
 
 
-    fs.writeFile("./Data/AutoRole.json", JSON.stringify(ar), (err) => {
+    fs.writeFile("./AutoRole.json", JSON.stringify(ar), (err) => {
     if (err) console.error(err)
   });
 
