@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const dateFormat = require('dateformat');
-
 const adminprefix = "$";
 const prefix = "R";
 let done = {};
@@ -282,24 +281,9 @@ if (command == "embed") {
 
 
 
-const TOKEN = "";
 
-function commandIs(str, msg){
-    return msg.content.toLowerCase().startsWith('.' + str);
-}
 
-function pluck(array) {
-    return array.map(function(item) { return item["name"]; });
-}
-
-function hasRole(mem, role) {
-    if(pluck(mem.roles).includes(role)){
-        return true;
-    } else {
-        return false;
-    }
-
-  }
+  
 
 
 
