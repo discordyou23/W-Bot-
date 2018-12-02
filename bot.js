@@ -71,39 +71,11 @@ member.addRole(KinG66S[member.user.id].roles.shift());
 
 
 
-client.on('ready',async () => {
-  client.channels.find(ch => ch.id === "518121069077331970" && ch.type === 'voice').join();
-});
-
-
-
-
-
-
-
 
 	
 	
-	
-	
 
-client.on('message',async Epic => {
-  var codes = "R";
-  if(Epic.content.startsWith(codes + "online")) {
-  if(!Epic.guild.member(Epic.author).hasPermissions('MANAGE_CHANNELS')) return Epic.reply(':x: **ليس لديك الصلاحيات الكافية**');
-  if(!Epic.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return Epic.reply(':x: **ليس معي الصلاحيات الكافية**');
-  Epic.guild.createChannel(`Voice Online : [ ${Epic.guild.members.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
-    console.log(`Voice Online Is Activation In ${Epic.guild.name}`);
-    c.overwritePermissions(Epic.guild.id, {
-      CONNECT: false,
-      SPEAK: false
-    });
-    setInterval(() => {
-      c.setName(` [VOICE_ONLINE]:[  ${Epic.guild.members.filter(m => m.voiceChannel).size} ]`)
-    },1000);
-  });
-  }
-});
+
 
 
 client.on("message", message => {
@@ -163,10 +135,10 @@ client.on('message', msg => {
 });
 
 
-client.on('message', msg => {
-  if(msg.content === 'Rstop')
-  msg.reply('**تم إيقاف الأغنية|✅**')
-});
+
+
+
+
 
 
 
