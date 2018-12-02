@@ -4,7 +4,7 @@ const adminprefix = "$";
 const prefix = "R";
 
 
-
+//fofo
 client.on('ready', () => {
   console.log('╔[══════════════════════════════════]╗');
   console.log('')
