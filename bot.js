@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "+";
 const fs = require('fs');
 const moment = require('moment');
 const convert = require("hh-mm-ss")
 var Canvas = require('canvas')
 var jimp = require('jimp')
-const prefix = "+";
+
 
 
 
