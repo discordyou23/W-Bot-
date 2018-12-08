@@ -166,18 +166,7 @@ client.on("message", message => {
 
 
 
-  const banembed = new Discord.RichEmbed()
-  .setAuthor(`✔تم تبنيد العضو✅`, user.displayAvatarURL)
-  .setColor("#502faf")
-  .setTimestamp()
-  .addField("**🚩المبند🚩:**",  '**[ ' + `${user.tag}` + ' ]**')
-  .addField("**⚠من قبل⚠:**", '**[ ' + `${message.author.tag}` + ' ]**')
-  .addField("**🔞السبب🔞**", '**[ ' + `${reason}` + ' ]**')
-  message.channel.send({
-    embed : banembed
-  })
-}
-});
+  
 
 
 
